@@ -1,0 +1,55 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: arial;
+	background-color: #ccc;
+}
+
+header {
+	margin: 30px auto;
+}
+header h1 {
+	color: blue;
+	text-align: center;
+	font-size: 80px;
+}
+header h1 i {
+	font-size: 100px;
+}
+.content {
+	margin-left: 10px;
+}
+footer h2{
+	color: #000000;
+	text-align: center;
+	margin-top: 30px;
+}
+.content .face h3{
+	color: blue;
+}
+table th, table tr td{
+	border: 1px solid #000000;
+	padding: 10px 0px;
+
+}
+table th {
+	background-color: green;
+}
+#name {
+	background-color: yellow;
+}
+table {
+	margin: 0px auto;
+	width: 70%;
+}
+caption {
+	font-size: 18px;
+	color: blue;
+	margin: 10px auto;
+}
+#zoom {
+	text-align: right;
+}
