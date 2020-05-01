@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>tvthag</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">tvthag</div>
+        <div class="menu" id="myMenu">
+            <a href="#" class="active">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">OTHERS</a>
+            <a href="#">CONTACTS</a>
+            <a href="#" class="icon" onClick="toShowMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
+        <div class="right-header" id="me">THANG</div>
+    </div>
+    <div class="contain">
+        <div class="item1">
+          <div class="caption-item1">
+            <h2>MAKE IT REAL SOME DAY</h2>
+            <p>GOAL,... YOU MUST IT REAL SOME DAY</p>
+            <a href="#"><i class="fas fa-long-arrow-alt-right gogo"></i></a>
+            <a href="#"><i class="fas fa-long-arrow-alt-down gogo1"></i></a>
+          </div>
+        </div>
+        <div class="item2">
+          <div class="caption-item2">
+            <h3>WHAT IS SOME DAY</h3>
+            <p>TODAY, TOMORROW, NEXT MONTH, NEXT YEAR</p>
+            <a href="#"><i class="fa fa-search search"></i></a>
+          </div>
+        </div>
+        <div class="item3">
+          <a href="#" class="caption-item3">
+              <h3>WEDDINGS</h3>
+              <p>MARRIED YOUR WIFE</p>
+          </a>
+        </div>
+        <div class="item4">
+          <a href="#" class="caption-item3">
+              <h3>FRIENDS</h3>
+              <p>WHO USUALLY PLAY WITH YOU</p>
+          </a>
+        </div>
+        <div class="item5">
+          <a href="#" class="caption-item3">
+              <h3>FAMILY</h3>
+              <p>WHO ALWAYS LOVE YOU</p>
+          </a>
+        </div>
+        <div class="item6">
+          <div class="caption-item6">
+            <h3>WHY BOOK A VILLA</h3>
+            <p>
+              Hsdsfdhfksejdsjkdghjks
+              dhgjksehgjkdhsjkgdh
+              jksghejkhghsdjkghsejkgh
+              jksdhgjksehgjkshejkghksdh
+              gksjehjkghseksdgsdjklghsej
+              khgjkdhgjkshekjghskjeghkjshd
+              jghkse...
+            </p>
+            <a href="#">READ MORE</a>
+          </div>
+        </div>
+        <div class="item7">
+          <div class="buy-villa">
+            <div class="buy">
+              <a href="#"><i class="fa fa-plus"></i></a>
+              <p>LA VILLA</p>
+              <i class="fa fa-heart">12</i>
+              <i class="fa fa-comment">100</i>
+            </div>
+            <div class="price">$150</div>
+          </div>
+        </div>
+        <div class="item8">
+          <div class="caption-item6">
+            <h3>WHY US</h3>
+            <p>
+              Hsdsfdhfksejdsjkdghjksdhgjk
+              sehgjkdhsjkgdhjksghejkhghsdj
+              kghsejkghjksdhgjksehgjkshe
+              jkghksdhgksjehjkghseksdgsdjk
+              lghsejkhgjkdhgjkshekjghskjegh
+              kjshdjghksedaskjd
+              hajkwhjdhajkwhjkdahw...
+            </p>
+            <a href="#">READ MORE</a>
+          </div>
+        </div>
+        <div class="item9">
+          <div class="caption-item6">
+            <h3>
+              SPEAK WITH ME
+              AND
+              MY FRIENDS
+            </h3>
+            <p>
+              Hsdsfdhfksejdsjkdghjksdhgjk
+              sehgjkdhsjkgdhjksghejkhghsdj
+              kghsejkghjksdhgjksehgjkshe
+              jkghksdhgksjehjkghseksdgsdjk
+              lghsejkhgjkdhgjkshekjghskjegh
+              kjshdjghksedaskjdsadasdawdwdwa
+              hajkwhjdhajkwhjkdahwsadwdawda
+            </p>
+          </div>
+        </div>
+        <div class="item10">
+          <div class="left-item">
+            <h4>OUR EMPLOYS</h4>
+            <p class="employ">248</p>
+          </div>
+          <div class="left-item">
+            <h4>GUEST REVIEWS</h4>
+            <p class="point">4.9/5.0</p>
+            <a href="#">VIEW US</a>
+          </div>
+        </div>
+        <div class="item11">
+          <div class="caption-item6">
+            <h3>
+              SEEN ON
+            </h3>
+            <div class="seen">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              <i class="fa fa-wordpress" aria-hidden="true"></i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+              <i class="fa fa-youtube" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="footer">
+      <div class="left-footer">
+        <p>Thank you for view it</p>
+        <p>Phone: 0123456789</p>
+        <p>Address: Hanoi city</p>
+      </div>
+      <div class="right-footer">
+        <p>View more in</p>
+        <div class="view-more">
+          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/27a42b207f.js" crossorigin="anonymous"></script>
+<script>
+    function toShowMenu() {
+      var x = document.getElementById("myMenu");
+      var y = document.getElementById("me");
+      if (x.className === "menu") {
+        x.className += "-responsive";
+      } else {
+        x.className = "menu";
+      }
+      if (y.className === "right-header") {
+        y.className += "-responsive";
+      } else {
+        y.className = "right-header";
+      }
+    }
+</script>
+</html>

@@ -1,0 +1,514 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.logo {
+    width: 200px;
+    height: 100%;
+    background-color: rgb(128,126,127);
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.menu {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.menu a {
+    display: block;
+    color: rgb(128,126,127);
+    text-align: center;
+    padding: 0px 9px;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 50px;
+}
+.menu a:hover {
+    color: #000000;
+}
+
+.menu .icon {
+    display: none;
+}
+.menu a.active {
+    color: #000000;
+}
+
+@media screen and (max-width: 640px) {
+    .menu {
+        justify-content: flex-end;
+    }
+    .menu a {
+        display: none;
+    }
+    .menu a.icon {
+        float: right;
+        display: block;
+    }
+    .menu-responsive {
+        position: relative;
+        flex: 1;
+        z-index: 1;
+    }
+    .menu-responsive .icon {
+        position: absolute;
+        right: 9px;
+        top: 0;
+        line-height: 50px;
+        background-color: #ffffff;
+        color: rgb(128,126,127);
+    }
+    .menu-responsive a {
+        display: block;
+        background-color: rgb(128,126,127);
+        height: 50px;
+        color: #ffffff;
+        line-height: 50px;
+        text-decoration: none;
+        text-align: center;
+    }
+    .menu-responsive a.active {
+        background-color: #ffffff;
+        color: #000000;
+    }
+    .menu-responsive a:hover {
+        background-color: rgb(173,173,173);
+    }
+    .menu-responsive a.active:hover, .menu-responsive .icon:hover {
+        background-color: #ffffff;
+    }
+    .right-header-responsive {
+        display: none;
+    }
+}
+@media screen and (max-width: 320px) {
+    .right-header {
+        display: none;
+    }
+}
+.right-header {
+    width: 100px;
+    height: 100%;
+    background-color: rgb(173,173,173);
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.contain {
+    display: grid;
+    grid-template-columns: repeat(3,33.33333333333333333%);
+    grid-template-areas: 
+        'bigContent bigContent bigContent2'
+        'bigContent bigContent bigContent2'
+        'smallContent1 smallContent2 smallContent3'
+        'smallContent4 smallContent5 smallContent6'
+        'smallContent7 smallContent8 smallContent9'
+    ;
+    grid-template-rows: repeat(5,33.3vw);
+}
+
+@media screen and (max-width: 640px) {
+    .contain {
+        grid-template-areas: 
+            'bigContent'
+            'bigContent2'
+            'smallContent1'
+            'smallContent2'
+            'smallContent3'
+            'smallContent4'
+            'smallContent5'
+            'smallContent6'
+            'smallContent7'
+            'smallContent8'
+            'smallContent9'
+        ;
+        grid-template-rows: repeat(11,33.3vw);
+        grid-template-columns: 100%;
+    }
+}
+
+.contain .item1 {
+    grid-area: bigContent;
+    background-color: rgb(65,69,70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1 .caption-item1 {
+    background-color: rgb(27, 27, 27);
+    padding: 15px;
+    position: relative;
+}
+
+.caption-item1 h2, .caption-item1 p {
+    text-align: center;
+    color: rgb(173,173,173);
+}
+.caption-item1 p {
+    font-size: 12px;
+}
+
+.caption-item1 .gogo, .caption-item2 .search {
+    display: block;
+    background-color: rgb(156,156,158);
+    position: absolute;
+    color: #ffffff;
+    padding: 5px 20px;
+    font-size: 15px;
+    right: 15px;
+}
+.gogo:hover, .search:hover {
+    background-color: rgb(131, 131, 133);
+}
+.caption-item2 .search {
+    top: 40px;
+}
+.caption-item1 .gogo {
+    top: 60px;
+}
+.caption-item1 .gogo1 {
+    display: none;
+}
+
+.caption-item2 {
+    background-color: #ffffff;
+    padding: 5px;
+    position: relative;
+}
+.caption-item2 h3, .caption-item2 p {
+    text-align: center;
+    color: #000000;
+}
+
+.caption-item2 p {
+    font-size: 10px;
+}
+@media screen and (max-width: 640px) {
+    .caption-item1 {
+        width: 100%;
+    }
+    .caption-item1 h2 {
+        font-size: 20px;
+    }
+
+    .caption-item1 p {
+        font-size: 10px;
+    }
+
+    .caption-item1 .gogo {
+        display: none;
+    }
+    .caption-item1 .gogo1 {
+        display: block;
+        background-color: rgb(156,156,158);
+        position: absolute;
+        color: #ffffff;
+        padding: 10px;
+        font-size: large;
+        right: 46vw;
+        top: 55px;
+    }
+    .gogo1:hover {
+        background-color: rgb(131, 131, 133);
+    }
+}
+@media screen and (max-width: 320px) {
+    .caption-item2 h3 {
+        font-size: 18px;
+    }
+    .caption-item2 p {
+        font-size: 8px;
+    }
+    .caption-item2 .search {
+        top: 37px;
+    }
+}
+
+.contain .item2 {
+    grid-area: bigContent2;
+    background-color: rgb(65,69,70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contain .item3 {
+    grid-area: smallContent1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caption-item3 {
+    padding: 10px;
+    background-color: rgb(100,100,100);
+    text-decoration: none;
+    display: block;
+    width: 180px;
+    height: 60px;
+    text-align: center;
+    color: #ffffff;
+}
+.caption-item3 p {
+    font-size: 10px;
+}
+.caption-item3:hover {
+    background-color: rgb(73, 73, 73);
+}
+.contain .item4 {
+    grid-area: smallContent2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contain .item5 {
+    grid-area: smallContent3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contain .item6 {
+    grid-area: smallContent4;
+    background-color: #ffffff;
+}
+.caption-item6 {
+    padding: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.caption-item6 h3 {
+    margin: 10px 0px;
+}
+.caption-item6 p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.caption-item6 a {
+    text-align: center;
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+    border: 1px solid rgb(116, 118, 119);
+    color: rgb(116, 118, 119);
+    border-radius: 10px;
+    width: 130px;
+}
+.caption-item6 a:hover {
+    background-color: rgb(202, 202, 202);
+}
+.caption-item6 h3, .caption-item6 p {
+    text-align: center;
+    color: rgb(27,27,27);
+}
+.contain .item7 {
+    grid-area: smallContent5;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.buy-villa {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 5px;
+}
+.buy-villa .buy {
+    flex: 2;
+    background-color: rgb(122, 122, 122);
+    border-radius: 2px 0px 0px 2px;
+    position: relative;
+}
+.buy a i {
+    position: absolute;
+    background-color: rgb(172, 172, 172);
+    padding: 5px;
+    top: -18px;
+    left: 15px;
+    color: #ffffff;
+}
+.buy a i:hover {
+    color: #747474;
+}
+.buy p {
+    color: #ffffff;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.buy i {
+    margin-left: 10px;
+    color: #ffffff;
+}
+.buy-villa .price {
+    flex: 1;
+    background-color: rgb(172, 172, 172);
+    border-radius: 0px 2px 2px 0px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+}
+.contain .item8 {
+    grid-area: smallContent6;
+}
+.item10 h4, .item10 p {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 5px;
+}
+.item10 .employ {
+    font-size: 50px;
+    font-style: italic;
+    font-weight: bold;
+}
+.item10 .point {
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+}
+.item10 a {
+    display: block;
+    margin: 0px auto;
+    border: 1px solid rgb(27,27,27);
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    color: rgb(27,27,27);
+    text-decoration: none;
+    width: 130px;
+}
+.item10 a:hover {
+    background-color: #ffffff;
+}
+.contain .item9 {
+    grid-area: smallContent7;
+    background-color: #ffffff;
+}
+.contain .item10 {
+    grid-area: smallContent8;
+    background-color: rgb(156,156,156);
+}
+.contain .item11 {
+    grid-area: smallContent9;
+    background-color: #ffffff;
+}
+.caption-item6 .seen i {
+    font-size: 30px;
+}
+.seen {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 640px) {
+    .seen {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.footer {
+    background-color: rgb(208,210,209);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 5px 20px;
+}
+.footer p {
+    color:  rgb(122,122,122);
+}
+.footer .left-footer {
+    width: 60%;
+}
+.footer .right-footer {
+    width: 40%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.right-footer p {
+    margin-right: 15px;
+}
+.right-footer .view-more {
+    border-left: 1px solid  rgb(122,122,122);
+    padding-left: 10px;
+}
+.view-more i {
+    margin-left: 5px;
+    color:  rgb(122,122,122);
+}
+.view-more i:hover {
+    color:  rgb(77, 77, 77);
+}
+@media screen and (max-width: 320px) {
+    .item10 a {
+        font-size: 12px;
+    }
+    .item10 .employ {
+        font-size: 40px;
+    }
+    .item10 .point {
+        font-size: 30px;
+    }
+    .caption-item6 h3 {
+        margin: 5px 0px;
+    }
+    .caption-item6 p {
+        font-size: 8px;
+    }
+    .caption-item6 a {
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .footer .right-footer {
+        flex-flow: column wrap;
+    }
+    .right-footer .view-more {
+        border-left: none;
+    }
+    .item10 {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .left-item {
+        flex: 1;
+    }
+    .right-item {
+        flex: 1;
+    }
+    .caption-item6 h3 {
+        font-size: 14px;
+    }
+    .caption-item6 p {
+        font-size: 9px;
+    }
+    .caption-item6 a {
+        font-size: 10px;
+    }
+}
